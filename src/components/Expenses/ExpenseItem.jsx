@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     backgroundColor: "#9e9e9e",
-    height: "11vh",
+    // height: "14vh",
     borderRadius: "12px",
     display: "flex",
     justifyContent: "space-between",
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     gap: "1rem",
     flexDirection: "column",
-    alignItems: "flex-end",
+    alignItems: "center",
     flexFlow: "column-reverse",
     justifyContent: "flex-start",
     fontWeight: "bold",
@@ -41,6 +42,12 @@ const useStyles = makeStyles((theme) => ({
 
 const ExpenseItem = (props) => {
   const classes = useStyles();
+  const [title, setTitle] = useState(props.title)
+
+  const clickHandler = () => {
+    setTitle('Updted !!!')
+    console.log(title)
+  }
   return (
       <Container maxWidth={false} className={classes.container}>
         <Typography component="div" className={classes.typography}>
