@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#424242",
     borderRadius: '12px',
     maxWidth: '95%',
-    width: '50rem',
+    width: '52rem',
   },
 }));
 

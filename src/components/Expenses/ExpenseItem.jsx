@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginRight: "12px",
+    padding: '10px',
   },
   typography: {
     backgroundColor: "#9e9e9e",
